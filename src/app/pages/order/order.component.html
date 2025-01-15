@@ -1,0 +1,62 @@
+<div class="container">
+    <h1>Order</h1>
+    <div class="section">
+        <div class="group first">
+            <div class="card client">
+                <h2>Client</h2>
+                <select [(ngModel)]="selectedClient">
+                    <option [ngValue]="null" disabled selected>Select client</option>
+                    <option *ngFor="let client of clients" [ngValue]="client">{{ client.name }}</option>
+                </select>
+            </div>
+            <div class="card product">
+                <h2>Product</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                    <tr *ngFor="let product of products">
+                        <td class="name">{{product.name}}</td>
+                        <td class="price">{{product.price | number:'1.2-2'}}</td>
+                        <td class="stock">{{product.stock}}</td>
+                        <td><button (click)="addProduct(product.name, product.price)" class="agree">Agree</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="group second">
+            <div class="card detail">
+                <h2>Detail</h2>
+                <div class="group-products">
+                    <div *ngFor="let product of selectedProducts" class="product-selected">
+                        <div class="group first">
+                            <p class="name-product">{{ product.name}}</p>
+                        </div>
+                        <div class="group second">
+                            <div class="group-child first">
+                                <button class="minus" (click)="decreaseQuantity(product)">-</button>
+                                <p class="number">{{ product.quantity}}</p>
+                                <button class="plus" (click)="increaseQuantity(product)">+</button>
+                            </div>
+                            <div class="group-child second">
+                                <p class="price-product">S/ {{ product.price | number:'1.2-2'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="total-products">
+                    <h1>Total S/{{ total | number:'1.2-2'}}</h1>
+                    <button (click)="registerOrder()">Register Order</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <br>
+        <button routerLink="/">Back</button>
+    </div>
+</div>

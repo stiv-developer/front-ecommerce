@@ -1,0 +1,33 @@
+.container{
+    padding: 20px;
+}
+
+table{
+    width: 100%;
+    border: 1px  solid black;
+    border-collapse: collapse;
+}
+
+table th{
+    border: 1px  solid black;
+}
+
+table td{
+    border: 1px  solid black;
+}
+
+table tr td{
+    text-align: center;
+}
+
+.group-button{
+    margin: 15px 0;
+}
+
+@media only screen and (min-width:1200px){
+    .container{
+        margin: 0 auto;
+        width: 1000px;
+    }
+
+}

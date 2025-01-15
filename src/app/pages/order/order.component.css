@@ -1,0 +1,111 @@
+.container{
+    padding: 50px 20px;
+}
+
+/* CLIENT */
+
+.card.client{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* PRODUCT */
+
+.card.product{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card.product .form-control{
+
+}
+
+.card.product .form-control button{
+    margin-left: 5px;
+}
+
+.card.product table{
+    width: 100%;
+    margin-top: 10px;
+    border: 1px  solid black;
+    border-collapse: collapse;
+}
+
+.card.product table th{
+    border: 1px  solid black;
+}
+
+.card.product table td{
+    border: 1px  solid black;
+}
+
+.card.product table tr .price,
+.card.product table tr .stock,
+.card.product table tr td{
+    text-align: center;
+}
+/* DETAIL */
+
+.card.detail{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card.detail .group-products{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card.detail .group-products .product-selected{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px;
+}
+
+.card.detail .group-products .product-selected .group.second .group-child.first{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.card.detail .group-products .product-selected .group.second .group-child.first button{
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.card.detail .total-products{
+    text-align: end;
+}
+
+/* .card.detail .group-products .product-selected */
+
+
+@media only screen and (min-width: 1200px) {
+    .container{
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .section .group.first{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .section{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+    .section .group{
+        width: 50%;
+    }
+}

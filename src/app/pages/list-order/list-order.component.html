@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>List Order</h1>
+    <div class="group-button">
+        <button routerLink="/newOrder">New Order</button>
+    </div>
+    <table>
+        <tr>
+            <th>Nro Order</th>
+            <th>Client</th>
+            <th>Total Price</th>
+            <th>Options</th>
+        </tr>
+        <tr *ngFor="let order of orders">
+            <td class="nroOrder">{{order.nroOrder}}</td>
+            <td class="name">{{order.client}}</td>
+            <td class="totalPrice">{{order.total}}</td>
+            <td><button class="delete" (click)="deleteOrder(order.id)">Delete</button>
+                <button class="update" [routerLink]="['/updateOrder',order.id]">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>
