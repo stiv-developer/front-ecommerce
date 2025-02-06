@@ -16,6 +16,7 @@
             <td class="totalPrice">{{order.total}}</td>
             <td><button class="delete" (click)="deleteOrder(order.id)">Delete</button>
                 <button class="update" [routerLink]="['/updateOrder',order.id]">Update</button>
+                <button class="detail">Detail</button>
             </td>
         </tr>
     </table>
